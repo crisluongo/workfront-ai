@@ -11,6 +11,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing message" }, { status: 400 });
   }
 
+  return NextResponse.json({ ok: true, version: "gemini-fts-v1" });
+
   // 1) Create or reuse a session
   let sid = sessionId;
   if (!sid) {
